@@ -19,16 +19,23 @@ class ComplexNumber
 
     def self.bulk_add(arr)
         sum = ComplexNumber.new(0,0)
-        for c in arr
-            sum = sum + c 
+        # for c in arr
+        #     sum = sum + c 
+        # end
+        arr.each do |c|
+            sum = sum + c
         end
+
         sum
         # arr.inject(:+)
     end
 
     def self.bulk_multiply(arr)
         multiply = ComplexNumber.new(1,0)
-        for c in arr
+        # for c in arr
+        #     multiply = multiply * c
+        # end
+        arr.each do |c|
             multiply = multiply * c
         end
         multiply
